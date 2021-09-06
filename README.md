@@ -13,12 +13,16 @@
 
 ## Configuration 
 
+<p>Spring Boot : 2.5.4</p>
+<p>My SQL : 8.0</p>
+<p>Java : 11.0.11</p>
+
 ### Database
 <p> MY SQL was locally installed and run. Previously a DB with the name "shopdb" was created.</i></p>
 
 * <b>src/resources/application.properties</b> is main configuration file
 
-<p>You can modify your DB settings according to following lines. It can be set a remote DB as well.</p>
+<p>You can modify your DB settings according to following lines. A remote DB can be set as well.</p>
 
     spring.jpa.hibernate.ddl-auto=update
     spring.datasource.url=jdbc:mysql://localhost:3306/shopdb
@@ -39,7 +43,7 @@
 <br>
 <i>How:</i> All spring services are up, Spring publishes an <i>'ApplicationReadyEvent'</i> and methods in /config/<b>DBConfig.java</b> catch the event and read files. 
 <br><br>
-<p>There are 6 customer users and one admin users.</p>
+<p>There are 6 customer users and one admin user.</p>
 
 <br>
 
@@ -53,6 +57,42 @@
 | customer4     | CUSTOMER      | customerpass  |
 | customer5     | CUSTOMER      | customerpass  |
 
+<br> <br>
 ![ER Diagram](https://github.com/FerhatAKKOC/Shopping/blob/master/images/ERDiagram.png)
 
-<img src="https://github.com/FerhatAKKOC/Shopping/blob/master/images/ERDiagram.png" alt="ER Diagram" width="200" height="200">
+## How to Run
+
+<p>Clone or download the project</p>
+<p>Open a command line window (cmd) in "Shopping" folder (Windows).</p>
+
+There are many ways to build and run application.
+
+Before running, be sure that My SQL configurations are done properly and it is running. Do not forget to create a schema. 
+
+Spring Boot serves server.port=8080 as default. It can be configured in application.properties
+
+    server.port=8080
+
+Run the following command. It builds and runs the application.
+
+```sh
+gradlew bootRun
+```
+
+<i>Note</i> : be sure that DB tables are filled in with mock data. Checks DB.
+
+Later, you can send some request to check if it is running properly.
+
+```sh
+http://localhost:8080/products/
+http://localhost:8080/news/
+http://localhost:8080/actuator
+```
+
+
+
+
+
+
+
+
