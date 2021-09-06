@@ -1,0 +1,146 @@
+[
+	{
+		"id": null,
+		"name": "Galaxy S7",
+		"price": 3500.0,
+		"description": "Galaxy S7 with ultra resolution camera",
+		"discount": 15.0,
+		"image": "galaxys7.png"
+	},
+	{
+		"id": null,
+		"name": "Hp Laptop",
+		"price": 7000.0,
+		"description": "Hp Laptop Ultra Fast Gaming Display",
+		"discount": 12.0,
+		"image": "HP7800.png"
+	},
+	{
+		"id": null,
+		"name": "Toyota Sedan",
+		"price": 22000.0,
+		"description": "Toyota Sedan hatchBag 5 doors white",
+		"discount": 5.0,
+		"image": "ToyotaSedan.png"
+	},
+	{
+		"id": null,
+		"name": "Product1",
+		"price": 456.0,
+		"description": "Product1 Description ",
+		"discount": 2.0,
+		"image": "Product1.png"
+	},
+	{
+		"id": null,
+		"name": "Product2",
+		"price": 200.0,
+		"description": "Product2 Description ",
+		"discount": 23.0,
+		"image": "Product2.png"
+	},
+	{
+		"id": null,
+		"name": "Product3",
+		"price": 1500.0,
+		"description": "Product3 Description ",
+		"discount": 10.0,
+		"image": "Product3.png"
+	},
+	{
+		"id": null,
+		"name": "Product4",
+		"price": 2500.0,
+		"description": "Product4 Description ",
+		"discount": 12.0,
+		"image": "Product4.png"
+	},
+	{
+		"id": null,
+		"name": "Product5",
+		"price": 3000.0,
+		"description": "Product5 Description ",
+		"discount": 15.0,
+		"image": "Product5.png"
+	},
+	{
+		"id": null,
+		"name": "Product6",
+		"price": 3300.0,
+		"description": "Product6 Description ",
+		"discount": 10.0,
+		"image": "Product6.png"
+	},
+	{
+		"id": null,
+		"name": "Product7",
+		"price": 3850.0,
+		"description": "Product7 Description ",
+		"discount": 7.0,
+		"image": "Product7.png"
+	},
+	{
+		"id": null,
+		"name": "Product8",
+		"price": 4100.0,
+		"description": "Product8 Description ",
+		"discount": 16.0,
+		"image": "Product8.png"
+	},
+	{
+		"id": null,
+		"name": "Product9",
+		"price": 4150.0,
+		"description": "Product9 Description ",
+		"discount": 15.0,
+		"image": "Product9.png"
+	},
+	{
+		"id": null,
+		"name": "Product10",
+		"price": 4555.0,
+		"description": "Product10 Description ",
+		"discount": 5.0,
+		"image": "Product10.png"
+	},
+	{
+		"id": null,
+		"name": "Product11",
+		"price": 425.0,
+		"description": "Product11 Description ",
+		"discount": 2.6,
+		"image": "Product11.png"
+	},
+	{
+		"id": null,
+		"name": "Product12",
+		"price": 7500.0,
+		"description": "Product12 Description ",
+		"discount": 26.0,
+		"image": "Product12.png"
+	},
+	{
+		"id": null,
+		"name": "Product13",
+		"price": 120000.0,
+		"description": "Product13 Description ",
+		"discount": 36.3,
+		"image": "Product13.png"
+	},
+	{
+		"id": null,
+		"name": "Product14",
+		"price": 1230.0,
+		"description": "Product14 Description ",
+		"discount": 40.5,
+		"image": "Product14.png"
+	},
+	{
+		"id": null,
+		"name": "Product15",
+		"price": 500.0,
+		"description": "Product15 Description ",
+		"discount": 5.2,
+		"image": "Product15.png"	
+	}		
+]
