@@ -87,6 +87,8 @@ Later, you can send some request to check if it is running properly.
 http://localhost:8080/products/
 http://localhost:8080/news/
 http://localhost:8080/actuator
+
+http://localhost:8080/swagger-ui.html
 ```
 
 
