@@ -25,8 +25,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        http
+                .csrf().disable()
+                .authorizeRequests()
                 .antMatchers("/", "static/css", "static/js").permitAll()            // static files
+                .antMatchers("/admin").hasRole(UserRoles.ADMIN)
+                .antMatchers("/customer").hasRole(UserRoles.CUSTOMER)
                 .antMatchers("/carts/**").hasAnyRole(UserRoles.CUSTOMER)
                 .and().formLogin();
     }

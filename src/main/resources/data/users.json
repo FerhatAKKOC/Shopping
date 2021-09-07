@@ -1,1 +1,93 @@
-[{"id":null,"username":"admin","password":"$2a$10$m1jZF/6ziZN8uzEpi8w34etrm8YA/IkBAaIseTTFnBVYTFvJddSNi","active":true,"roles":[{"id":null,"role":"ROLE_ADMIN","users":null},{"id":null,"role":"ROLE_CUSTOMER","users":null}]},{"id":null,"username":"customer","password":"$2a$10$ftdLNvIZzB0ePGogj3vfjeRbzAJk9p4oCB7aY5AbD2R3GaH1lUq1e","active":true,"roles":[{"id":null,"role":"ROLE_CUSTOMER","users":null}]},{"id":null,"username":"customer1","password":"$2a$10$.Q8LK3rxHWsxz0ywKWGIwe/KeIBKA7LVrMkpVmSC6jcUVGxSO7Fci","active":true,"roles":[{"id":null,"role":"ROLE_CUSTOMER","users":null}]},{"id":null,"username":"customer2","password":"$2a$10$7S9uuDXyQ1BBgJhhleRE9uL8LmtvL0k/MgpeGRpE8.cetn51lQ3uS","active":true,"roles":[{"id":null,"role":"ROLE_CUSTOMER","users":null}]},{"id":null,"username":"customer3","password":"$2a$10$MwgXeRyK0b1USOSoROz7k.aykh5a6nLU24OMewBFLTvN5F1wjMS42","active":true,"roles":[{"id":null,"role":"ROLE_CUSTOMER","users":null}]},{"id":null,"username":"customer4","password":"$2a$10$Uf0Up8.6qX2N84s4FXJ6.OCqmOlW0Ziid6CKAE52T.pZVfgT.j5Z2","active":true,"roles":[{"id":null,"role":"ROLE_CUSTOMER","users":null}]},{"id":null,"username":"customer5","password":"$2a$10$aU3ZosfoIW4.X1ra6sCySOL0fH5Zoj7CaVVISyemZx1ZzDZ3C.B9.","active":true,"roles":[{"id":null,"role":"ROLE_CUSTOMER","users":null}]}]
+[
+	{
+		"id": null,
+		"username": "admin",
+		"password": "$2a$10$m1jZF/6ziZN8uzEpi8w34etrm8YA/IkBAaIseTTFnBVYTFvJddSNi",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_ADMIN",
+				"users": null
+			}
+		]
+	},
+	{
+		"id": null,
+		"username": "customer",
+		"password": "$2a$10$ftdLNvIZzB0ePGogj3vfjeRbzAJk9p4oCB7aY5AbD2R3GaH1lUq1e",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_CUSTOMER",
+				"users": null
+			}
+		]
+	},
+	{
+		"id": null,
+		"username": "customer1",
+		"password": "$2a$10$.Q8LK3rxHWsxz0ywKWGIwe/KeIBKA7LVrMkpVmSC6jcUVGxSO7Fci",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_CUSTOMER",
+				"users": null
+			}
+		]
+	},
+	{
+		"id": null,
+		"username": "customer2",
+		"password": "$2a$10$7S9uuDXyQ1BBgJhhleRE9uL8LmtvL0k/MgpeGRpE8.cetn51lQ3uS",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_CUSTOMER",
+				"users": null
+			}
+		]
+	},
+	{
+		"id": null,
+		"username": "customer3",
+		"password": "$2a$10$MwgXeRyK0b1USOSoROz7k.aykh5a6nLU24OMewBFLTvN5F1wjMS42",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_CUSTOMER",
+				"users": null
+			}
+		]
+	},
+	{
+		"id": null,
+		"username": "customer4",
+		"password": "$2a$10$Uf0Up8.6qX2N84s4FXJ6.OCqmOlW0Ziid6CKAE52T.pZVfgT.j5Z2",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_CUSTOMER",
+				"users": null
+			}
+		]
+	},
+	{
+		"id": null,
+		"username": "customer5",
+		"password": "$2a$10$aU3ZosfoIW4.X1ra6sCySOL0fH5Zoj7CaVVISyemZx1ZzDZ3C.B9.",
+		"active": true,
+		"roles": [
+			{
+				"id": null,
+				"role": "ROLE_CUSTOMER",
+				"users": null
+			}
+		]
+	}
+]

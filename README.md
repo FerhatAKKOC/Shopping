@@ -91,10 +91,134 @@ http://localhost:8080/actuator
 http://localhost:8080/swagger-ui.html
 ```
 
+## Roles and login-logout
+<p>Home page return current user and her/him roles.</p>
+    
+    http://localhost:8080/
+
+<p>If user role is either <i>ROLE_ADMIN</i> or <i>ROLE_CUSTOMER</i>, you can logout</p>
+
+    http://localhost:8080/logout
+
+<p>If current role is <b>ROLE_ANONYMOUS</b>, you can login one of the following roles. Be sure that, previously be in ROLE_ANONYMOUS.</p>
+
+    http://localhost:8080/admin
+    http://localhost:8080/customer
 
 
+### Products entity
 
+<p>This API support pagination, filter and search functionalities. You can use swagger-ui.html or try the following apis. Searching made according to <i>name</i>, <i>price</i> and <i>dicount.</i>
 
+        http://localhost:8080/products/
+        http://localhost:8080/products/3
+        http://localhost:8080/products/?page=2
+        http://localhost:8080/products/?page=2&size=3
+        http://localhost:8080/products/?name=Toy
+        http://localhost:8080/products/?price=10000
+        http://localhost:8080/products/?discount=20
 
+<p><b>add/delete/update</b> Api's require <i>ADMIN</i> role.</p>
+<p>Note : Content-Type : <i> application/json</i>,  method: <i>POST/PUT/DELETE</i>  role: <i>ADMIN</i> </p>
+
+APIs
+
+    http://localhost:8080/products/add        (POST)
+    http://localhost:8080/products/add/all    (POST)
+    http://localhost:8080/products/update/2   (PUT)
+    http://localhost:8080/products/delete/2   (DELETE)
+
+Body    
+```sh
+{
+    "id": 2,
+    "name": "New product",
+    "price": 210.0,
+    "description": "New product api adding test ",
+    "discount": 3.0,
+    "image": "NewProduct.png"
+}
+```
+
+### News entity
+
+<p>This Api's reqire ADMIN role except read operations. Pagination is not supported.</p>
+
+APIs
+
+    http://localhost:8080/news/
+    http://localhost:8080/news/1
+    http://localhost:8080/news/add              (POST)
+    http://localhost:8080/news/add/all
+    http://localhost:8080/news/update/2         (PUT)
+    http://localhost:8080/news/delete/2         
+    http://localhost:8080/news/delete/all       (DELETE)
+
+Body
+```sh
+{
+    "id": 2,
+    "head": "Test",
+    "description": "Testing News api",
+    "image": "test.png"
+}
+```
+
+### Cart entity
+
+<p>This Api's reqire CUSTOMER role.</p>
+
+API's
+
+    http://localhost:8080/carts/
+    http://localhost:8080/carts/add/2       (Add productid:2, quantity:1)
+    http://localhost:8080/carts/update/2/3  (update product:2, quantity:3)
+    http://localhost:8080/carts/delete/2    
+    http://localhost:8080/carts/orderSummary
+
+Output
+```sh
+{
+    "cartModelList": [
+        {
+            "product": {
+                "id": 6,
+                "name": "Product3",
+                "price": 1500,
+                "description": "Product3 Description ",
+                "discount": 10,
+                "image": "Product3.png"
+            },
+            "quantity": 1,
+            "price": 1500
+        },
+        {
+            "product": {
+                "id": 2,
+                "name": "Hp Laptop",
+                "price": 7000,
+                "description": "Hp Laptop Ultra Fast Gaming Display",
+                "discount": 12,
+                "image": "HP7800.png"
+            },
+            "quantity": 3,
+            "price": 21000
+        }
+    ],
+    "orderSummary": 22500
+}
+```
+<br>
+
+## To Do
+
+* Banner Api's will be developed and improved.
+* Pagination/Search/Filter will be implemented in for <i>News</i> and <i>Cart</i> entities.
+* Globally both Rest&Application exceptions handling will centralized with <b>@ControllerAdvice</b>
+* Bean validation will be developed
+* Logs managament will be centralized by ShopLogger
+* Login&Logout pages will be developed
+* Beans will be separated according to profiles; <i>dev</i>, <i>prod</i>
+    
 
 
