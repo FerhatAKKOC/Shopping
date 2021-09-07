@@ -4,12 +4,12 @@
 
 <p>This backend api project for practicing <b>Spring Boot</b> + <b>MySQL</b> with role base security features. The goal was to build some basic shopping cart wep APIs.</p>
 <br>
-<p>Spring Boot (Security,Data JPA, Web, Actuator, Devtool) + MySQL were used.</p>
+<p>Spring Boot (Security, Data JPA, Web, Actuator, Devtool) + MySQL were used.</p>
 <br>
 <p>There is authentication and authorization functionality with Spring Security. There are two roles; <b>ADMIN</b> and <b>CUSTOMER. </b>
-<i>Products</i> and <i>News</i> catalogues can be modified <i>(<b>add, update, delete</b>)</i> only by ADMIN role. Customers with <i>CUSTOMER</i> role can select multiple products and update their <i>cart</i> catalogue. Customers must be login to order. </p>
+<i>Products</i> and <i>News</i> catalogues can be modified <i>(<b>add, update, delete</b>)</i> only by ADMIN role. Customers with <i>CUSTOMER</i> role can select multiple products and update their <i>cart</i> catalogues. Customers must be login to order. </p>
 <br>
-<p><i>Products</i> API supports <i>pagination</i>, <i>filter</i> and <i>search</i> features.</p>
+<p><i>Product</i> APIs support <i>pagination</i>, <i>filter</i> and <i>search</i> features.</p>
 
 ## Configuration 
 
@@ -20,7 +20,7 @@
 ### Database
 <p> MY SQL was locally installed and run. Previously a DB with the name "shopdb" was created.</i></p>
 
-* <b>src/resources/application.properties</b> is main configuration file
+* <b>src/resources/application.properties</b> is main configuration file.
 
 <p>You can modify your DB settings according to following lines. A remote DB can be set as well.</p>
 
@@ -34,12 +34,12 @@
    <br>
     * <b>user.json :</b> includes users, roles and passwords
     * <b>products.json :</b> includes some mock products for product catalogue
-    * <b>news.json :</b> includes some mock news for news catalogue.
+    * <b>news.json :</b> includes some mock news for news catalogue
 
 <br>
 
 ### Users, Roles and Passwords
-<p>When application bring up, it loads files under <i>src/resources/data</i> and write them into DB tables at start-up.</p>
+<p>When application bring up, it loads files under <i>src/resources/data</i> and write them into DB tables at start-up. DB schema is built by Data JPA.</p>
 <br>
 <i>How:</i> All spring services are up, Spring publishes an <i>'ApplicationReadyEvent'</i> and methods in /config/<b>DBConfig.java</b> catch the event and read files. 
 <br><br>
@@ -62,14 +62,14 @@
 
 ## How to Run
 
-<p>Clone or download the project</p>
+<p>Firstly, clone or download the project.</p>
 <p>Open a command line window (cmd) in "Shopping" folder (Windows).</p>
 
-There are many ways to build and run application.
+There are many ways to build and run application, I will show the simplest way.
 
-Before running, be sure that My SQL configurations are done properly and it is running. Do not forget to create a schema. 
+Before running, be sure that My SQL configurations are done properly and it is running. Do not forget to create a schema, <i>'shopdb'</i>.
 
-Spring Boot serves server.port=8080 as default. It can be configured in application.properties
+Spring Boot serves server.port=8080 as default. It can be configured in application.properties.
 
     server.port=8080
 
@@ -79,9 +79,9 @@ Run the following command. It builds and runs the application.
 gradlew bootRun
 ```
 
-<i>Note</i> : be sure that DB tables are filled in with mock data. Checks DB.
+<i>Note</i> : be sure that DB tables are filled in with mock data. Checks DB, if an issue arises, checks logs.
 
-Later, you can send some request to check if it is running properly.
+Later, you can send some REST requests to check if it is running properly.
 
 ```sh
 http://localhost:8080/products/
@@ -92,7 +92,7 @@ http://localhost:8080/swagger-ui.html
 ```
 
 ## Roles and login-logout
-<p>Home page return current user and her/him roles.</p>
+<p>Home page returns current user and her/him roles.</p>
     
     http://localhost:8080/
 
@@ -108,7 +108,7 @@ http://localhost:8080/swagger-ui.html
 
 ### Products entity
 
-<p>This API support pagination, filter and search functionalities. You can use swagger-ui.html or try the following apis. Searching made according to <i>name</i>, <i>price</i> and <i>dicount.</i>
+<p>This APIs support pagination, filter and search functionalities. You can use swagger-ui.html or try the following ones. Searching is made according to <i>name</i>, <i>price</i> and <i>dicount</i> attributes.
 
         http://localhost:8080/products/
         http://localhost:8080/products/3
@@ -118,8 +118,8 @@ http://localhost:8080/swagger-ui.html
         http://localhost:8080/products/?price=10000
         http://localhost:8080/products/?discount=20
 
-<p><b>add/delete/update</b> Api's require <i>ADMIN</i> role.</p>
-<p>Note : Content-Type : <i> application/json</i>,  method: <i>POST/PUT/DELETE</i>  role: <i>ADMIN</i> </p>
+<p><b>add/delete/update</b> APIs require <i>ADMIN</i> role.</p>
+<p>Note : Content-Type : <i> application/json</i>,  method: <i>POST/PUT/DELETE</i>  role: <i>ADMIN</i> If you use <i>postman</i>, set method types properly.</p>
 
 APIs
 
@@ -142,7 +142,7 @@ Body
 
 ### News entity
 
-<p>This Api's reqire ADMIN role except read operations. Pagination is not supported.</p>
+<p>This APIs reqire ADMIN role except read operations. Pagination is not supported.</p>
 
 APIs
 
@@ -166,7 +166,7 @@ Body
 
 ### Cart entity
 
-<p>This Api's reqire CUSTOMER role.</p>
+<p>This APIs reqire CUSTOMER role.</p>
 
 API's
 
@@ -212,10 +212,12 @@ Output
 
 ## To Do
 
-* Banner Api's will be developed and improved.
-* Pagination/Search/Filter will be implemented in for <i>News</i> and <i>Cart</i> entities.
+* Banner Api's will be developed and improved
+* Unit tests will be written
+* Pagination/Search/Filter will be implemented in for <i>News</i> and <i>Cart</i> entities
 * Globally both Rest&Application exceptions handling will centralized with <b>@ControllerAdvice</b>
 * Bean validation will be developed
+* View models and Entities separation
 * Logs managament will be centralized by ShopLogger
 * Login&Logout pages will be developed
 * Beans will be separated according to profiles; <i>dev</i>, <i>prod</i>
