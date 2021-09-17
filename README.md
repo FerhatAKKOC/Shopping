@@ -11,6 +11,21 @@
 <br>
 <p><i>Product</i> APIs support <i>pagination</i>, <i>filter</i> and <i>search</i> features.</p>
 
+![ER Diagram](https://github.com/FerhatAKKOC/Shopping/blob/master/images/UI.png)
+
+### Features
+
+1. <p>There are users with <b>ADMIN</b> and <b>CUSTOMER</b> roles.</p>
+    <p>a. Only users with ADMIN roles can <b>add, update</b> and <b>delete</b> products to catalogue. </p>
+    <p>b. Similarly, the <b>News</b> can also be modified by ADMIN users. </p>
+2. <p>The application gets a list of products. Product APIs support <b>Pagination/Search/Filter</b> functionalities.</p>    
+3. <p>Shopping Cart can be modified users with <i>CUSTOMER</i> roles. </p>
+    <p>a. Customers can add or remove product </p>
+    <p>b. They can have multiple orders with the same products </p>
+    <p>c. A <b>“Total”</b> order summary contains total cost for on checkout </p>
+
+<br>
+
 ## Configuration 
 
 <p>Spring Boot : 2.5.4</p>
